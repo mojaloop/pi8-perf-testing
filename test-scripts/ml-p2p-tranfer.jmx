@@ -13,15 +13,19 @@
     <hashTree>
       <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="true">
         <collectionProp name="UserParameters.names">
-          <stringProp name="1375673806">payerfsp</stringProp>
-          <stringProp name="-2008798737">transfer_ID</stringProp>
-          <stringProp name="1375286523">payeefsp</stringProp>
-          <stringProp name="1562089070">sourceAmountDefault</stringProp>
-          <stringProp name="1544027483">destinationAmountDefault</stringProp>
-          <stringProp name="575402001">currency</stringProp>
-          <stringProp name="-1624156417">sourceExpiryDurationDefault</stringProp>
           <stringProp name="-57519070">ml-api-adapter-host-dev1</stringProp>
           <stringProp name="-57519069">ml-api-adapter-host-dev2</stringProp>
+          <stringProp name="-2008798737">transfer_ID</stringProp>
+          <stringProp name="1375673806">payerfsp</stringProp>
+          <stringProp name="1375286523">payeefsp</stringProp>
+          <stringProp name="575402001">currency</stringProp>
+          <stringProp name="754398458">transferExpiration</stringProp>
+          <stringProp name="-861311717">condition</stringProp>
+          <stringProp name="1439931029">ilpPacket</stringProp>
+          <stringProp name="1794616870">transferDateHeader</stringProp>
+          <stringProp name="-1413853096">amount</stringProp>
+          <stringProp name="95467907">delay</stringProp>
+          <stringProp name="699456037">num_of_dfsps</stringProp>
           <stringProp name="1585867926">dfspc_1</stringProp>
           <stringProp name="1585867927">dfspc_2</stringProp>
           <stringProp name="1585867928">dfspc_3</stringProp>
@@ -34,25 +38,22 @@
           <stringProp name="1917265498">dfspc_10</stringProp>
           <stringProp name="1917265499">dfspc_11</stringProp>
           <stringProp name="1917265500">dfspc_12</stringProp>
-          <stringProp name="699456037">num_of_dfsps</stringProp>
-          <stringProp name="754398458">transferExpiration</stringProp>
-          <stringProp name="-861311717">condition</stringProp>
-          <stringProp name="1439931029">ilpPacket</stringProp>
-          <stringProp name="1794616870">transferDateHeader</stringProp>
-          <stringProp name="-1413853096">amount</stringProp>
-          <stringProp name="95467907">delay</stringProp>
         </collectionProp>
         <collectionProp name="UserParameters.thread_values">
-          <collectionProp name="258850461">
-            <stringProp name="1375673806">payerfsp</stringProp>
-            <stringProp name="187832203">${__UUID}</stringProp>
-            <stringProp name="1375286523">payeefsp</stringProp>
-            <stringProp name="50">2</stringProp>
-            <stringProp name="50">2</stringProp>
-            <stringProp name="84326">USD</stringProp>
-            <stringProp name="52">4</stringProp>
+          <collectionProp name="495162615">
             <stringProp name="387418798">dev1-ml-api-adapter.mojaloop.live</stringProp>
             <stringProp name="398734925">dev2-ml-api-adapter.mojaloop.live</stringProp>
+            <stringProp name="187832203">${__UUID}</stringProp>
+            <stringProp name="-874725522">${__chooseRandom(payerfsp,testfsp1,testfsp2,randomFSP)}</stringProp>
+            <stringProp name="-1689170917">${__chooseRandom(payeefsp,testfsp3,testfsp4,randomFSP)}</stringProp>
+            <stringProp name="84326">USD</stringProp>
+            <stringProp name="-1004798821">${__timeShift(yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;,${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;)},PT6M,,)}</stringProp>
+            <stringProp name="-461484555">HOr22-H3AfTDHrSkPjJtVPRdKouuMkDXTR4ejlQa8Ks</stringProp>
+            <stringProp name="1813693831">AQAAAAAAAADIEHByaXZhdGUucGF5ZWVmc3CCAiB7InRyYW5zYWN0aW9uSWQiOiIyZGY3NzRlMi1mMWRiLTRmZjctYTQ5NS0yZGRkMzdhZjdjMmMiLCJxdW90ZUlkIjoiMDNhNjA1NTAtNmYyZi00NTU2LThlMDQtMDcwM2UzOWI4N2ZmIiwicGF5ZWUiOnsicGFydHlJZEluZm8iOnsicGFydHlJZFR5cGUiOiJNU0lTRE4iLCJwYXJ0eUlkZW50aWZpZXIiOiIyNzcxMzgwMzkxMyIsImZzcElkIjoicGF5ZWVmc3AifSwicGVyc29uYWxJbmZvIjp7ImNvbXBsZXhOYW1lIjp7fX19LCJwYXllciI6eyJwYXJ0eUlkSW5mbyI6eyJwYXJ0eUlkVHlwZSI6Ik1TSVNETiIsInBhcnR5SWRlbnRpZmllciI6IjI3NzEzODAzOTExIiwiZnNwSWQiOiJwYXllcmZzcCJ9LCJwZXJzb25hbEluZm8iOnsiY29tcGxleE5hbWUiOnt9fX0sImFtb3VudCI6eyJjdXJyZW5jeSI6IlVTRCIsImFtb3VudCI6IjIwMCJ9LCJ0cmFuc2FjdGlvblR5cGUiOnsic2NlbmFyaW8iOiJERVBPU0lUIiwic3ViU2NlbmFyaW8iOiJERVBPU0lUIiwiaW5pdGlhdG9yIjoiUEFZRVIiLCJpbml0aWF0b3JUeXBlIjoiQ09OU1VNRVIiLCJyZWZ1bmRJbmZvIjp7fX19</stringProp>
+            <stringProp name="1255381334">${__time(EEE\, d MMM yyyy HH:mm:ss &apos;GMT&apos;)}</stringProp>
+            <stringProp name="59128407">${__Random(0,99)}.${__Random(0,9)}${__Random(1,9)}</stringProp>
+            <stringProp name="-730456284">${__Random(2,8)}</stringProp>
+            <stringProp name="50">2</stringProp>
             <stringProp name="-2060061975">dfsp1|dfsp2</stringProp>
             <stringProp name="-1172558295">dfsp2|dfsp1</stringProp>
             <stringProp name="-285054614">dfsp3|dfsp1</stringProp>
@@ -65,13 +66,6 @@
             <stringProp name="-2060061973">dfsp1|dfsp4</stringProp>
             <stringProp name="-1172558292">dfsp2|dfsp4</stringProp>
             <stringProp name="-285054611">dfsp3|dfsp4</stringProp>
-            <stringProp name="49">1</stringProp>
-            <stringProp name="-1004798821">${__timeShift(yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;,${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;)},PT6M,,)}</stringProp>
-            <stringProp name="-461484555">HOr22-H3AfTDHrSkPjJtVPRdKouuMkDXTR4ejlQa8Ks</stringProp>
-            <stringProp name="1813693831">AQAAAAAAAADIEHByaXZhdGUucGF5ZWVmc3CCAiB7InRyYW5zYWN0aW9uSWQiOiIyZGY3NzRlMi1mMWRiLTRmZjctYTQ5NS0yZGRkMzdhZjdjMmMiLCJxdW90ZUlkIjoiMDNhNjA1NTAtNmYyZi00NTU2LThlMDQtMDcwM2UzOWI4N2ZmIiwicGF5ZWUiOnsicGFydHlJZEluZm8iOnsicGFydHlJZFR5cGUiOiJNU0lTRE4iLCJwYXJ0eUlkZW50aWZpZXIiOiIyNzcxMzgwMzkxMyIsImZzcElkIjoicGF5ZWVmc3AifSwicGVyc29uYWxJbmZvIjp7ImNvbXBsZXhOYW1lIjp7fX19LCJwYXllciI6eyJwYXJ0eUlkSW5mbyI6eyJwYXJ0eUlkVHlwZSI6Ik1TSVNETiIsInBhcnR5SWRlbnRpZmllciI6IjI3NzEzODAzOTExIiwiZnNwSWQiOiJwYXllcmZzcCJ9LCJwZXJzb25hbEluZm8iOnsiY29tcGxleE5hbWUiOnt9fX0sImFtb3VudCI6eyJjdXJyZW5jeSI6IlVTRCIsImFtb3VudCI6IjIwMCJ9LCJ0cmFuc2FjdGlvblR5cGUiOnsic2NlbmFyaW8iOiJERVBPU0lUIiwic3ViU2NlbmFyaW8iOiJERVBPU0lUIiwiaW5pdGlhdG9yIjoiUEFZRVIiLCJpbml0aWF0b3JUeXBlIjoiQ09OU1VNRVIiLCJyZWZ1bmRJbmZvIjp7fX19</stringProp>
-            <stringProp name="1255381334">${__time(EEE\, d MMM yyyy HH:mm:ss &apos;GMT&apos;)}</stringProp>
-            <stringProp name="59128407">${__Random(0,99)}.${__Random(0,9)}${__Random(1,9)}</stringProp>
-            <stringProp name="-730456284">${__Random(2,8)}</stringProp>
           </collectionProp>
         </collectionProp>
         <boolProp name="UserParameters.per_iteration">false</boolProp>
@@ -81,7 +75,7 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">100</stringProp>
+          <stringProp name="LoopController.loops">4</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">5</stringProp>
@@ -131,7 +125,7 @@
           <stringProp name="TestPlan.comments">get transfer</stringProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor - Pick Use Case" enabled="true">
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor - Pick Use Case" enabled="false">
             <boolProp name="resetInterpreter">false</boolProp>
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
