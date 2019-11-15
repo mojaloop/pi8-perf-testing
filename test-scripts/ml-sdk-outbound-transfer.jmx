@@ -13,14 +13,7 @@
     <hashTree>
       <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="true">
         <collectionProp name="UserParameters.names">
-          <stringProp name="-2008798737">transfer_ID</stringProp>
-          <stringProp name="1375673806">payerfsp</stringProp>
-          <stringProp name="1375286523">payeefsp</stringProp>
           <stringProp name="575402001">currency</stringProp>
-          <stringProp name="754398458">transferExpiration</stringProp>
-          <stringProp name="-861311717">condition</stringProp>
-          <stringProp name="1439931029">ilpPacket</stringProp>
-          <stringProp name="1794616870">transferDateHeader</stringProp>
           <stringProp name="-1413853096">amount</stringProp>
           <stringProp name="95467907">delay</stringProp>
           <stringProp name="699456037">num_of_dfsps</stringProp>
@@ -54,15 +47,8 @@
           <stringProp name="1892821877">TYPE_simfsp04</stringProp>
         </collectionProp>
         <collectionProp name="UserParameters.thread_values">
-          <collectionProp name="-1051972">
-            <stringProp name="187832203">${__UUID}</stringProp>
-            <stringProp name="-874725522">${__chooseRandom(payerfsp,testfsp1,testfsp2,randomFSP)}</stringProp>
-            <stringProp name="-1689170917">${__chooseRandom(payeefsp,testfsp3,testfsp4,randomFSP)}</stringProp>
+          <collectionProp name="-132625239">
             <stringProp name="84326">USD</stringProp>
-            <stringProp name="-434060937">{__timeShift(yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;,${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;)},PT6M,,)}</stringProp>
-            <stringProp name="-461484555">HOr22-H3AfTDHrSkPjJtVPRdKouuMkDXTR4ejlQa8Ks</stringProp>
-            <stringProp name="1813693831">AQAAAAAAAADIEHByaXZhdGUucGF5ZWVmc3CCAiB7InRyYW5zYWN0aW9uSWQiOiIyZGY3NzRlMi1mMWRiLTRmZjctYTQ5NS0yZGRkMzdhZjdjMmMiLCJxdW90ZUlkIjoiMDNhNjA1NTAtNmYyZi00NTU2LThlMDQtMDcwM2UzOWI4N2ZmIiwicGF5ZWUiOnsicGFydHlJZEluZm8iOnsicGFydHlJZFR5cGUiOiJNU0lTRE4iLCJwYXJ0eUlkZW50aWZpZXIiOiIyNzcxMzgwMzkxMyIsImZzcElkIjoicGF5ZWVmc3AifSwicGVyc29uYWxJbmZvIjp7ImNvbXBsZXhOYW1lIjp7fX19LCJwYXllciI6eyJwYXJ0eUlkSW5mbyI6eyJwYXJ0eUlkVHlwZSI6Ik1TSVNETiIsInBhcnR5SWRlbnRpZmllciI6IjI3NzEzODAzOTExIiwiZnNwSWQiOiJwYXllcmZzcCJ9LCJwZXJzb25hbEluZm8iOnsiY29tcGxleE5hbWUiOnt9fX0sImFtb3VudCI6eyJjdXJyZW5jeSI6IlVTRCIsImFtb3VudCI6IjIwMCJ9LCJ0cmFuc2FjdGlvblR5cGUiOnsic2NlbmFyaW8iOiJERVBPU0lUIiwic3ViU2NlbmFyaW8iOiJERVBPU0lUIiwiaW5pdGlhdG9yIjoiUEFZRVIiLCJpbml0aWF0b3JUeXBlIjoiQ09OU1VNRVIiLCJyZWZ1bmRJbmZvIjp7fX19</stringProp>
-            <stringProp name="1255381334">${__time(EEE\, d MMM yyyy HH:mm:ss &apos;GMT&apos;)}</stringProp>
             <stringProp name="59128407">${__Random(0,99)}.${__Random(0,9)}${__Random(1,9)}</stringProp>
             <stringProp name="-730456284">${__Random(2,8)}</stringProp>
             <stringProp name="52">4</stringProp>
