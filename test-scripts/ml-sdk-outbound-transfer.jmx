@@ -345,7 +345,7 @@ vars.put(&quot;dfsp_payee_display_name&quot;, dfsp_payee_display_name);
               </elementProp>
               <elementProp name="application" elementType="Argument">
                 <stringProp name="Argument.name">application</stringProp>
-                <stringProp name="Argument.value">outbound-api-transfer-test</stringProp>
+                <stringProp name="Argument.value">sdk-outbound-api-transfer-test</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="measurement" elementType="Argument">
