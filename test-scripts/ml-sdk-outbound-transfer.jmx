@@ -13,8 +13,6 @@
     <hashTree>
       <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="true">
         <collectionProp name="UserParameters.names">
-          <stringProp name="-57519070">ml-api-adapter-host-dev1</stringProp>
-          <stringProp name="-57519069">ml-api-adapter-host-dev2</stringProp>
           <stringProp name="-2008798737">transfer_ID</stringProp>
           <stringProp name="1375673806">payerfsp</stringProp>
           <stringProp name="1375286523">payeefsp</stringProp>
@@ -56,9 +54,7 @@
           <stringProp name="1892821877">TYPE_simfsp04</stringProp>
         </collectionProp>
         <collectionProp name="UserParameters.thread_values">
-          <collectionProp name="1217246190">
-            <stringProp name="387418798">dev1-ml-api-adapter.mojaloop.live</stringProp>
-            <stringProp name="398734925">dev2-ml-api-adapter.mojaloop.live</stringProp>
+          <collectionProp name="-1051972">
             <stringProp name="187832203">${__UUID}</stringProp>
             <stringProp name="-874725522">${__chooseRandom(payerfsp,testfsp1,testfsp2,randomFSP)}</stringProp>
             <stringProp name="-1689170917">${__chooseRandom(payeefsp,testfsp3,testfsp4,randomFSP)}</stringProp>
@@ -71,13 +67,13 @@
             <stringProp name="-730456284">${__Random(2,8)}</stringProp>
             <stringProp name="52">4</stringProp>
             <stringProp name="2040550364">simfsp01;simfsp02</stringProp>
-            <stringProp name="2040550365">simfsp01;simfsp03</stringProp>
-            <stringProp name="2040550366">simfsp01;simfsp04</stringProp>
             <stringProp name="1844036858">simfsp02;simfsp01</stringProp>
+            <stringProp name="2040550365">simfsp01;simfsp03</stringProp>
             <stringProp name="1844036860">simfsp02;simfsp03</stringProp>
-            <stringProp name="1844036861">simfsp02;simfsp04</stringProp>
             <stringProp name="1647523353">simfsp03;simfsp01</stringProp>
             <stringProp name="1647523354">simfsp03;simfsp02</stringProp>
+            <stringProp name="2040550366">simfsp01;simfsp04</stringProp>
+            <stringProp name="1844036861">simfsp02;simfsp04</stringProp>
             <stringProp name="1647523356">simfsp03;simfsp04</stringProp>
             <stringProp name="1451009848">simfsp04;simfsp01</stringProp>
             <stringProp name="1451009849">simfsp04;simfsp02</stringProp>
@@ -107,7 +103,7 @@
         <stringProp name="ThreadGroup.on_sample_error">stoptest</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">20</stringProp>
+          <stringProp name="LoopController.loops">10</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">1</stringProp>
         <stringProp name="ThreadGroup.ramp_time">5</stringProp>
@@ -179,9 +175,7 @@ int x = 0;
 log.info(&quot;num_of_dfsps:&quot; + (n+1));
 
 if( n &gt; 0) {
-	for (int i=0; i&lt;n; i++){
-	    x = n*(n+1);
-	}
+  	x = n*(n+1);
 } else {
 	x = 1;
 }
@@ -350,7 +344,7 @@ vars.put(&quot;dfsp_payee_display_name&quot;, dfsp_payee_display_name);
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
+        <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="false">
           <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="influxdbMetricsSender" elementType="Argument">
