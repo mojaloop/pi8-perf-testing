@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <UserParameters guiclass="UserParametersGui" testclass="UserParameters" testname="User Parameters" enabled="true">
+        <collectionProp name="UserParameters.names">
+          <stringProp name="-57519070">ml-api-adapter-host-dev1</stringProp>
+          <stringProp name="-57519069">ml-api-adapter-host-dev2</stringProp>
+          <stringProp name="-2008798737">transfer_ID</stringProp>
+          <stringProp name="1375673806">payerfsp</stringProp>
+          <stringProp name="1375286523">payeefsp</stringProp>
+          <stringProp name="575402001">currency</stringProp>
+          <stringProp name="754398458">transferExpiration</stringProp>
+          <stringProp name="-861311717">condition</stringProp>
+          <stringProp name="1439931029">ilpPacket</stringProp>
+          <stringProp name="1794616870">transferDateHeader</stringProp>
+          <stringProp name="-1413853096">amount</stringProp>
+          <stringProp name="95467907">delay</stringProp>
+          <stringProp name="699456037">num_of_dfsps</stringProp>
+          <stringProp name="1585867926">dfspc_1</stringProp>
+          <stringProp name="1585867927">dfspc_2</stringProp>
+          <stringProp name="1585867928">dfspc_3</stringProp>
+          <stringProp name="1585867929">dfspc_4</stringProp>
+          <stringProp name="1585867930">dfspc_5</stringProp>
+          <stringProp name="1585867931">dfspc_6</stringProp>
+          <stringProp name="1585867932">dfspc_7</stringProp>
+          <stringProp name="1585867933">dfspc_8</stringProp>
+          <stringProp name="1585867934">dfspc_9</stringProp>
+          <stringProp name="1917265498">dfspc_10</stringProp>
+          <stringProp name="1917265499">dfspc_11</stringProp>
+          <stringProp name="1917265500">dfspc_12</stringProp>
+          <stringProp name="79241412">HOST_simfsp01</stringProp>
+          <stringProp name="79241413">HOST_simfsp02</stringProp>
+          <stringProp name="79241414">HOST_simfsp03</stringProp>
+          <stringProp name="79241415">HOST_simfsp04</stringProp>
+          <stringProp name="2055681713">ID_simfsp01</stringProp>
+          <stringProp name="2055681714">ID_simfsp02</stringProp>
+          <stringProp name="2055681715">ID_simfsp03</stringProp>
+          <stringProp name="2055681716">ID_simfsp04</stringProp>
+          <stringProp name="1632893309">DNAME_simfsp01</stringProp>
+          <stringProp name="1632893310">DNAME_simfsp02</stringProp>
+          <stringProp name="1632893311">DNAME_simfsp03</stringProp>
+          <stringProp name="1632893312">DNAME_simfsp04</stringProp>
+          <stringProp name="1892821874">TYPE_simfsp01</stringProp>
+          <stringProp name="1892821875">TYPE_simfsp02</stringProp>
+          <stringProp name="1892821876">TYPE_simfsp03</stringProp>
+          <stringProp name="1892821877">TYPE_simfsp04</stringProp>
+        </collectionProp>
+        <collectionProp name="UserParameters.thread_values">
+          <collectionProp name="1217246190">
+            <stringProp name="387418798">dev1-ml-api-adapter.mojaloop.live</stringProp>
+            <stringProp name="398734925">dev2-ml-api-adapter.mojaloop.live</stringProp>
+            <stringProp name="187832203">${__UUID}</stringProp>
+            <stringProp name="-874725522">${__chooseRandom(payerfsp,testfsp1,testfsp2,randomFSP)}</stringProp>
+            <stringProp name="-1689170917">${__chooseRandom(payeefsp,testfsp3,testfsp4,randomFSP)}</stringProp>
+            <stringProp name="84326">USD</stringProp>
+            <stringProp name="-434060937">{__timeShift(yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;,${__time(yyyy-MM-dd&apos;T&apos;HH:mm:ss.SSS&apos;Z&apos;)},PT6M,,)}</stringProp>
+            <stringProp name="-461484555">HOr22-H3AfTDHrSkPjJtVPRdKouuMkDXTR4ejlQa8Ks</stringProp>
+            <stringProp name="1813693831">AQAAAAAAAADIEHByaXZhdGUucGF5ZWVmc3CCAiB7InRyYW5zYWN0aW9uSWQiOiIyZGY3NzRlMi1mMWRiLTRmZjctYTQ5NS0yZGRkMzdhZjdjMmMiLCJxdW90ZUlkIjoiMDNhNjA1NTAtNmYyZi00NTU2LThlMDQtMDcwM2UzOWI4N2ZmIiwicGF5ZWUiOnsicGFydHlJZEluZm8iOnsicGFydHlJZFR5cGUiOiJNU0lTRE4iLCJwYXJ0eUlkZW50aWZpZXIiOiIyNzcxMzgwMzkxMyIsImZzcElkIjoicGF5ZWVmc3AifSwicGVyc29uYWxJbmZvIjp7ImNvbXBsZXhOYW1lIjp7fX19LCJwYXllciI6eyJwYXJ0eUlkSW5mbyI6eyJwYXJ0eUlkVHlwZSI6Ik1TSVNETiIsInBhcnR5SWRlbnRpZmllciI6IjI3NzEzODAzOTExIiwiZnNwSWQiOiJwYXllcmZzcCJ9LCJwZXJzb25hbEluZm8iOnsiY29tcGxleE5hbWUiOnt9fX0sImFtb3VudCI6eyJjdXJyZW5jeSI6IlVTRCIsImFtb3VudCI6IjIwMCJ9LCJ0cmFuc2FjdGlvblR5cGUiOnsic2NlbmFyaW8iOiJERVBPU0lUIiwic3ViU2NlbmFyaW8iOiJERVBPU0lUIiwiaW5pdGlhdG9yIjoiUEFZRVIiLCJpbml0aWF0b3JUeXBlIjoiQ09OU1VNRVIiLCJyZWZ1bmRJbmZvIjp7fX19</stringProp>
+            <stringProp name="1255381334">${__time(EEE\, d MMM yyyy HH:mm:ss &apos;GMT&apos;)}</stringProp>
+            <stringProp name="59128407">${__Random(0,99)}.${__Random(0,9)}${__Random(1,9)}</stringProp>
+            <stringProp name="-730456284">${__Random(2,8)}</stringProp>
+            <stringProp name="52">4</stringProp>
+            <stringProp name="2040550364">simfsp01;simfsp02</stringProp>
+            <stringProp name="2040550365">simfsp01;simfsp03</stringProp>
+            <stringProp name="2040550366">simfsp01;simfsp04</stringProp>
+            <stringProp name="1844036858">simfsp02;simfsp01</stringProp>
+            <stringProp name="1844036860">simfsp02;simfsp03</stringProp>
+            <stringProp name="1844036861">simfsp02;simfsp04</stringProp>
+            <stringProp name="1647523353">simfsp03;simfsp01</stringProp>
+            <stringProp name="1647523354">simfsp03;simfsp02</stringProp>
+            <stringProp name="1647523356">simfsp03;simfsp04</stringProp>
+            <stringProp name="1451009848">simfsp04;simfsp01</stringProp>
+            <stringProp name="1451009849">simfsp04;simfsp02</stringProp>
+            <stringProp name="1451009850">simfsp04;simfsp03</stringProp>
+            <stringProp name="-1010122897">perf1-simulator01.mojaloop.live</stringProp>
+            <stringProp name="497428912">perf1-simulator02.mojaloop.live</stringProp>
+            <stringProp name="2004980721">perf1-simulator03.mojaloop.live</stringProp>
+            <stringProp name="-782434766">perf1-simulator04.mojaloop.live</stringProp>
+            <stringProp name="1899059122">11113803912</stringProp>
+            <stringProp name="-104908845">12213803913</stringProp>
+            <stringProp name="-2108876814">13313803912</stringProp>
+            <stringProp name="182122515">14413803913</stringProp>
+            <stringProp name="3333283">luke</stringProp>
+            <stringProp name="-880902001">tarken</stringProp>
+            <stringProp name="-1134985694">kenobi</stringProp>
+            <stringProp name="-1023380946">obiwan</stringProp>
+            <stringProp name="-2011613734">MSISDN</stringProp>
+            <stringProp name="-2011613734">MSISDN</stringProp>
+            <stringProp name="-2011613734">MSISDN</stringProp>
+            <stringProp name="-2011613734">MSISDN</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <boolProp name="UserParameters.per_iteration">false</boolProp>
+      </UserParameters>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="SDK-Outbound-Transfer-Thread" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">stoptest</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">20</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">5</stringProp>
+        <longProp name="ThreadGroup.start_time">1474143365000</longProp>
+        <longProp name="ThreadGroup.end_time">1474143365000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">120</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="outbound-api-transfer-test" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;from&quot;: {&#xd;
+        &quot;displayName&quot;: &quot;${dfsp_payer_display_name}&quot;,&#xd;
+        &quot;idType&quot;: &quot;${dfsp_payer_type}&quot;,&#xd;
+        &quot;idValue&quot;: &quot;${dfsp_payer_id}&quot;&#xd;
+    },&#xd;
+    &quot;to&quot;: {&#xd;
+        &quot;displayName&quot;: &quot;${dfsp_payee_display_name}&quot;,&#xd;
+        &quot;idType&quot;: &quot;${dfsp_payee_type}&quot;,&#xd;
+        &quot;idValue&quot;: &quot;${dfsp_payee_id}&quot;&#xd;
+    },&#xd;
+    &quot;amountType&quot;: &quot;SEND&quot;,&#xd;
+    &quot;currency&quot;: &quot;${currency}&quot;,&#xd;
+    &quot;amount&quot;: &quot;${amount}&quot;,&#xd;
+    &quot;transactionType&quot;: &quot;TRANSFER&quot;,&#xd;
+    &quot;initiatorType&quot;: &quot;CONSUMER&quot;,&#xd;
+    &quot;note&quot;: &quot;test payment&quot;,&#xd;
+    &quot;homeTransactionId&quot;: &quot;123ABC&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${dfsp_host}</stringProp>
+          <stringProp name="HTTPSampler.port">3501</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/transfers</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="TestPlan.comments">get transfer</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <BeanShellPreProcessor guiclass="TestBeanGUI" testclass="BeanShellPreProcessor" testname="BeanShell PreProcessor - Pick Use Case" enabled="true">
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="script">// Beanshell script to select the use-case for DFSPs based on the &apos;num_of_dfsps&apos; var
+
+log.info(&quot;============START=============&quot;);
+
+//int n = (new Integer(vars.get(&quot;num_of_dfsps&quot;)))-1;
+int n = Integer.parseInt(vars.get(&quot;num_of_dfsps&quot;).trim())-1;
+int x = 0;
+
+log.info(&quot;num_of_dfsps:&quot; + (n+1));
+
+if( n &gt; 0) {
+	for (int i=0; i&lt;n; i++){
+	    x = n*(n+1);
+	}
+} else {
+	x = 1;
+}
+
+int nextI = java.util.concurrent.ThreadLocalRandom.current().nextInt(1, x+1);
+
+//print(&quot;x=&quot;+x);
+//String dfspc = &quot;${__V(dfspc_${__Random(1,2,)})}&quot;;
+
+String dfspc = vars.get(&quot;dfspc_&quot;+nextI);
+
+log.info(&quot;dfspc:&quot; + dfspc);
+
+String[] dfspList = dfspc.split(&quot;;&quot;);
+
+//for (int i = 0; i &lt; dfspList.length; i++)
+//{ 	
+//	log.info(&quot;Value is: &quot; + dfspList[i]); 
+//}
+
+String dfsp_host = vars.get(&quot;HOST_&quot;+dfspList[0]);
+String dfsp_payer_id = vars.get(&quot;ID_&quot;+dfspList[0]);
+String dfsp_payee_id = vars.get(&quot;ID_&quot;+dfspList[1]);
+
+String dfsp_payer_type = vars.get(&quot;TYPE_&quot;+dfspList[0]);
+String dfsp_payee_type = vars.get(&quot;TYPE_&quot;+dfspList[1]);
+
+String dfsp_payer_display_name = vars.get(&quot;DNAME_&quot;+dfspList[0]);
+String dfsp_payee_display_name = vars.get(&quot;DNAME_&quot;+dfspList[1]);
+
+log.info(&quot;dfsp_host:&quot; + dfsp_host);
+log.info(&quot;dfsp_payer_id:&quot; + dfsp_payer_id);
+log.info(&quot;dfsp_payee_id:&quot; + dfsp_payee_id);
+log.info(&quot;dfsp_payer_type:&quot; + dfsp_payer_type);
+log.info(&quot;dfsp_payee_type:&quot; + dfsp_payee_type);
+log.info(&quot;dfsp_payer_display_name:&quot; + dfsp_payer_display_name);
+log.info(&quot;dfsp_payee_display_name:&quot; + dfsp_payee_display_name);
+
+vars.put(&quot;dfsp_source&quot;, dfspList[0]);
+vars.put(&quot;dfsp_destination&quot;, dfspList[1]);
+vars.put(&quot;dfsp_host&quot;, dfsp_host);
+vars.put(&quot;dfsp_payer_id&quot;, dfsp_payer_id);
+vars.put(&quot;dfsp_payee_id&quot;, dfsp_payee_id);
+vars.put(&quot;dfsp_payer_type&quot;, dfsp_payer_type);
+vars.put(&quot;dfsp_payee_type&quot;, dfsp_payee_type);
+vars.put(&quot;dfsp_payer_display_name&quot;, dfsp_payer_display_name);
+vars.put(&quot;dfsp_payee_display_name&quot;, dfsp_payee_display_name);
+</stringProp>
+          </BeanShellPreProcessor>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate</stringProp>
+              </elementProp>
+              <elementProp name="Cache-Control" elementType="Header">
+                <stringProp name="Header.name">Cache-Control</stringProp>
+                <stringProp name="Header.value">no-cache</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">FSPIOP-Source</stringProp>
+                <stringProp name="Header.value">${dfsp_source}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">FSPIOP-Destination</stringProp>
+                <stringProp name="Header.value">${dfsp_destination}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">${delay}</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+          <com.atlantbh.jmeter.plugins.jsonutils.jsonformatter.JSONFormatter guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonformatter.gui.JSONFormatterGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonformatter.JSONFormatter" testname="jp@gc - JSON Format Post Processor" enabled="true"/>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
+          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="influxdbMetricsSender" elementType="Argument">
+                <stringProp name="Argument.name">influxdbMetricsSender</stringProp>
+                <stringProp name="Argument.value">org.apache.jmeter.visualizers.backend.influxdb.HttpMetricsSender</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="influxdbUrl" elementType="Argument">
+                <stringProp name="Argument.name">influxdbUrl</stringProp>
+                <stringProp name="Argument.value">http://test-influxdb:8086/write?db=jmeter</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="application" elementType="Argument">
+                <stringProp name="Argument.name">application</stringProp>
+                <stringProp name="Argument.value">outbound-api-transfer-test</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="measurement" elementType="Argument">
+                <stringProp name="Argument.name">measurement</stringProp>
+                <stringProp name="Argument.value">jmeter</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="summaryOnly" elementType="Argument">
+                <stringProp name="Argument.name">summaryOnly</stringProp>
+                <stringProp name="Argument.value">false</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="samplersRegex" elementType="Argument">
+                <stringProp name="Argument.name">samplersRegex</stringProp>
+                <stringProp name="Argument.value">.*</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="percentiles" elementType="Argument">
+                <stringProp name="Argument.name">percentiles</stringProp>
+                <stringProp name="Argument.value">90;95;99</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="testTitle" elementType="Argument">
+                <stringProp name="Argument.name">testTitle</stringProp>
+                <stringProp name="Argument.value">outbound-api-transfer-test</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="eventTags" elementType="Argument">
+                <stringProp name="Argument.name">eventTags</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
+        </BackendListener>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
